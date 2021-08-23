@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Add dependency for accessing Access Database
+    implementation group: 'net.sf.ucanaccess', name: 'ucanaccess', version: '5.0.1'
+    // Add dependency of Apache POI, parse and manipulate
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.9'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
